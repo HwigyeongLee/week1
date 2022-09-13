@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+<title>week1</title>
+	<style type="text/css">
+
+		body{background: black;
+			 font-family: "Roboto Mono", monospace;
+		     font-size: 18px;
+		     color: white;
+		     text-align: center;
+		    }
+		img{width: 500px;
+		    display: block;
+		    margin:  auto;
+		    margin-top: 100px;
+		    margin-bottom: 10px;}
+		div{text-align: center;}
+		button{width: 70px; 
+			   height: 30px; 
+			   margin-right: 3px;
+			   border-color: white;
+			   border-style: solid;
+			   border-width: 1.5px;
+			   border-radius: 100px;
+			   background: black;
+			   color: white;
+			   font-family: "Roboto Mono", monospace;
+		       font-size: 18px;
+		       }
+		h1{font-size: 20px;}
+	</style>
+</head>
+<body>
+	<img id="joy" src="clear lens.jpg">
+	<br>
+	<h1>Redvelvet - Psyco ♬</h1>
+	<br>
+	<div><input id="vol" type="range" max="100" min="0">&nbsp;&nbsp;&nbsp;
+	<button id="playBut">play</button>
+	<button id="stopBut">stop</button></div>
+	<audio id="psycoSong" src="redvelvet psyco demo ver.mp3"></audio>
+
+	<script type="text/javascript">
+
+		joy.onmouseover= function(){
+		joy.src = "Broken lens.jpg";
+		}
+		joy.onmouseout= function(){
+		joy.src = "clear lens.jpg";
+		}
+
+		playBut.onclick = function(){
+			psycoSong.play();
+
+		}
+		stopBut.onclick = function(){
+			psycoSong.pause();
+		}
+
+        vol.value = 100;
+		vol.oninput = function(){
+			psycoSong.volume = vol.value / 100;
+		}
+
+	</script>
+</body>
+</html>
+
+		
